@@ -9,10 +9,18 @@ Build a jar:
 Run the app as follows: 
 ```
 make start_mysql
+```
+wait for a couple of seconds for the server to get ready
+```
 java -jar target/ApiServer-1.0-SNAPSHOT.jar
 ```
 
 Try the api as follows: `curl -H "Content-Type: application/json" -X POST -d '{"version":"1.1.0","username":"userA"}' http://localhost:8080/validate`
+
+The response should be something like this:
+```
+{"isValid":true,"enabledFeatures":["newfeature","notifications"]}
+```
 
 ## Dev Guide:
 
