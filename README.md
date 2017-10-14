@@ -6,16 +6,19 @@ Build a jar:
 
 `mvn clean package`
 
-Run the app as follows: 
+Start mysql docker container: 
 ```
 make start_mysql
 ```
-wait for a couple of seconds for the server to get ready
+Wait for a couple of seconds for the server to get ready and then start the api server:
 ```
 java -jar target/ApiServer-1.0-SNAPSHOT.jar
 ```
 
-Try the api as follows: `curl -H "Content-Type: application/json" -X POST -d '{"version":"1.1.0","username":"userA"}' http://localhost:8080/validate`
+Make a request to the api: 
+```
+curl -H "Content-Type: application/json" -X POST -d '{"version":"1.1.0","username":"userA"}' http://localhost:8080/validate
+```
 
 The response should be something like this:
 ```
