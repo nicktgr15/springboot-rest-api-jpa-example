@@ -4,7 +4,9 @@
 
 Build a jar:
 
-`mvn clean package`
+```
+mvn clean package
+```
 
 Start mysql docker container: 
 ```
